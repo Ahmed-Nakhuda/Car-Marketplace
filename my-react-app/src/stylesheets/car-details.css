@@ -1,0 +1,37 @@
+#car-details #car-container {
+    display: flex;
+}
+
+#swiper-container {
+    flex: 5;
+    width: 60%;
+    height: 100%;
+}
+
+#car-details #car-description {
+    flex: 3;
+    padding: 20px;
+    background-color:#f4f4f4;
+}
+
+.descriptions {
+    display: flex;
+    flex: 1;
+}
+
+.description {
+    flex: 1;
+    margin: 10px;
+}
+
+.info {
+    margin-bottom: 20px;
+}
+
+.minus-margin-top {
+    margin-top: -30px;
+}
+
+#car-description-text {
+    margin-bottom: 15px;
+}

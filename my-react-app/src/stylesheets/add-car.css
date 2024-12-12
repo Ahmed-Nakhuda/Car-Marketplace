@@ -1,0 +1,53 @@
+#add-car {
+    padding-bottom: 20px;
+}
+
+#add-car nav {
+    margin-bottom: 5px;
+}
+
+#add-car form {
+    border: 1px solid black;
+}
+
+#add-car form {
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 25px;
+    margin-top: 20px;
+}
+
+#add-car .group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+
+#add-car .group .MuiTextField-root,
+#add-car .group .MuiSelect-root {
+    flex: 1;
+    min-width: 200px;
+}
+
+#add-car form h6 {
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+#add-car input[type="file"] {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#add-car #submit-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vehicle-type-textfield {
+    margin-right: 10px;
+}

@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#accordion {
+    grid-area: accordion;
+    height: 400px; 
+}
+
+#home-cards {
+    grid-area: home-cards;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0;
+}
+
+#clear-filters-container {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+#results-found {
+    grid-area: results-found;
+    margin-left: 40px;
+    margin-top: 10px;
+    max-height: fit-content;
+}
+
+#navbar {
+    grid-area: nav;
+}
+
+
+#home {
+    display: grid;
+    grid-template-areas:
+        "nav nav nav nav nav nav"
+        "accordion results-found results-found results-found results-found results-found"
+        "accordion home-cards home-cards home-cards home-cards home-cards";
+    grid-template-rows: auto auto auto;
+    row-gap: 10px;
+}
+
+#results-found .filter-value {
+    margin-left: 5px;
+}
+
+
+#home .clear-filter-buttons {
+    color: black; 
+    background-color: rgb(242, 255, 255);
+}
+
+#home-card-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.favouriteIcon {
+    color: pink;
+}
+
+.favouriteIcon:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.saved {
+    color: red;
+}

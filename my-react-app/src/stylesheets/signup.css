@@ -1,0 +1,32 @@
+#signup {
+    /* background-color: #03045e; */
+    width: 25%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    /* centers the div itself */
+    position: absolute;
+    top: 5px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 2px solid black;
+}
+
+#signup h1 {
+    text-align: center;
+}
+
+#signup p {
+    margin: 20px;
+    text-align: center;
+}
+
+
+#signup p span {
+    margin-right: 5px;
+}
+

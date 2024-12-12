@@ -1,0 +1,63 @@
+#edit-car {
+    padding-bottom: 20px;
+}
+
+#edit-car nav {
+    margin-bottom: 5px;
+}
+
+#edit-car form {
+    border: 1px solid black;
+}
+
+#edit-car form {
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 25px;
+    margin-top: 20px;
+}
+
+#edit-car .group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+
+#edit-car .group .MuiTextField-root,
+#edit-car .group .MuiSelect-root {
+    flex: 1;
+    min-width: 200px;
+}
+
+#edit-car form h6 {
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+#edit-car input[type="file"] {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#edit-car #submit-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#edit-car #update-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vehicle-type-textfield {
+    margin-right: 10px;
+}
+
+#edit-car h2 {
+    text-align: center;
+}
