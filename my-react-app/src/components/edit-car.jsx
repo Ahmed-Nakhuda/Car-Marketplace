@@ -483,16 +483,18 @@ const EditCar = () => {
                     <FormControl component="fieldset">
                         <FormLabel component="legend">Fuel Type</FormLabel>
                         <RadioGroup row onChange={(e) => setFuelType(e.target.value)} value={fuelType}>
-                            <FormControlLabel value="fuel" control={<Radio />} label="Fuel" />
-                            <FormControlLabel value="electric" control={<Radio />} label="Electric" />
-                            <FormControlLabel value="hybrid" control={<Radio />} label="Hybrid" />
+                            <FormControlLabel value="Gasoline" control={<Radio />} label="Gasoline" />
+                            <FormControlLabel value="Diesel" control={<Radio />} label="Diesel" />
+                            <FormControlLabel value="Electric" control={<Radio />} label="Electric" />
+                            <FormControlLabel value="Hybrid" control={<Radio />} label="Hybrid" />
+                          
                         </RadioGroup>
                     </FormControl>
                 </div>
 
 
                 <div className="group">
-                    {fuelType === "fuel" && (
+                    {fuelType === "Gasoline" && (
                         <>
                             <TextField value={cityFuelConsumption} onChange={(e) => setCityFuelConsumption(e.target.value)} type="number" name="cityFuelConsumption" id="cityFuelConsumption" label="City Fuel Consumption L/100km" variant="standard" />
                             <TextField value={highwayFuelConsumption} d onChange={(e) => setHighwayFuelConsumption(e.target.value)} type="number" name="highwayFuelConsumption" id="highwayFuelConsumption" label="Highway Fuel Consumption L/100km" variant="standard" />
@@ -502,7 +504,17 @@ const EditCar = () => {
                 </div>
 
                 <div className="group">
-                    {fuelType === "electric" && (
+                    {fuelType === "Diesel" && (
+                        <>
+                            <TextField value={cityFuelConsumption} onChange={(e) => setCityFuelConsumption(e.target.value)} type="number" name="cityFuelConsumption" id="cityFuelConsumption" label="City Fuel Consumption L/100km" variant="standard" />
+                            <TextField value={highwayFuelConsumption} d onChange={(e) => setHighwayFuelConsumption(e.target.value)} type="number" name="highwayFuelConsumption" id="highwayFuelConsumption" label="Highway Fuel Consumption L/100km" variant="standard" />
+                            <TextField value={combinedFuelConsumption} onChange={(e) => setCombinedFuelConsumption(e.target.value)} type="number" name="combinedFuelConsumption" id="combinedFuelConsumption" label="Combined Fuel Consumption L/100km" variant="standard" />
+                        </>
+                    )}
+                </div>
+
+                <div className="group">
+                    {fuelType === "Electric" && (
                         <>
                             <TextField value={batteryRange} onChange={(e) => setBatteryRange(e.target.value)} type="number" name="batteryRange" id="batteryRange" label="Battery Range (km)" variant="standard" />
                             <TextField value={chargingTime} onChange={(e) => setChargingTime(e.target.value)} type="number" name="chargingTime" id="chargingTime" label="Charging Time (hours)" variant="standard" />
@@ -511,7 +523,7 @@ const EditCar = () => {
                 </div>
 
                 <div className="group">
-                    {fuelType === "hybrid" && (
+                    {fuelType === "Hybrid" && (
                         <>
                             <TextField value={cityFuelConsumption} onChange={(e) => setCityFuelConsumption(e.target.value)} type="number" name="cityFuelConsumption" id="cityFuelConsumption" label="City Fuel Consumption L/100km" variant="standard" />
                             <TextField value={highwayFuelConsumption} onChange={(e) => setHighwayFuelConsumption(e.target.value)} type="number" name="highwayFuelConsumption" id="highwayFuelConsumption" label="Highway Fuel Consumption L/100km" variant="standard" />

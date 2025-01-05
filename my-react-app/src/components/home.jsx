@@ -198,6 +198,7 @@ const Home = () => {
         setNumberOfSeats([]);
         setSelectedConditions([]);
         setSelectedFuelTypes([]);
+        setPrice([0, 250000]);
     }
 
     // Function to clear individual filters
@@ -651,10 +652,10 @@ const Home = () => {
                     </AccordionSummary>
                     <AccordionDetails>
                         <FormGroup>
-                            <FormControlLabel control={<Checkbox checked={selectedFuelTypes.includes("gasoline")} onChange={() => handleFuelTypeChange("gasoline")} />} label="Gasoline" />
-                            <FormControlLabel control={<Checkbox checked={selectedFuelTypes.includes("diesel")} onChange={() => handleFuelTypeChange("diesel")} />} label="Diesel" />
-                            <FormControlLabel control={<Checkbox checked={selectedFuelTypes.includes("electric")} onChange={() => handleFuelTypeChange("electric")} />} label="Electric" />
-                            <FormControlLabel control={<Checkbox checked={selectedFuelTypes.includes("hybrid")} onChange={() => handleFuelTypeChange("hybrid")} />} label="Hybrid" />
+                            <FormControlLabel control={<Checkbox checked={selectedFuelTypes.includes("Gasoline")} onChange={() => handleFuelTypeChange("gasoline")} />} label="Gasoline" />
+                            <FormControlLabel control={<Checkbox checked={selectedFuelTypes.includes("Diesel")} onChange={() => handleFuelTypeChange("diesel")} />} label="Diesel" />
+                            <FormControlLabel control={<Checkbox checked={selectedFuelTypes.includes("Eletric")} onChange={() => handleFuelTypeChange("electric")} />} label="Electric" />
+                            <FormControlLabel control={<Checkbox checked={selectedFuelTypes.includes("Hybrid")} onChange={() => handleFuelTypeChange("hybrid")} />} label="Hybrid" />
                         </FormGroup>
                     </AccordionDetails>
                 </Accordion>

@@ -27,6 +27,16 @@ const MyPostings = () => {
         navigate(`/editCarPage/${id}`);
     }
 
+      // Open and close the dialog
+      const handleOpen = (car) => {
+        setSelectedCar(car); // Set the car being deleted
+        setOpen(true);      
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+
 
     // Function to delete a car
     const handleDelete = () => {
@@ -40,33 +50,21 @@ const MyPostings = () => {
                 console.log(data);
                 const updatedCars = cars.filter(car => car._id !== selectedCar._id);
                 setCars(updatedCars);
-                setOpen(false); // Close the dialog
+                setOpen(false); // Close the dialog 
                 setSelectedCar(null); // Clear the selected car
             })
             .catch(err => console.log(err));
     };
 
 
-    // Open and close the dialog
-    const handleOpen = (car) => {
-        setSelectedCar(car); // Set the car being deleted
-        setOpen(true);      
-    };
-
-    const handleClose = () => {
-        setOpen(false);
-    };
-
-
-
     // useEffect hook to fetch cars which the logged-in user has posted
     useEffect(() => {
-        fetch(`http://localhost:5000/cars?email=${email}`)
+        fetch(`http://localhost:5000/userCars?email=${email}`)
             .then(res => res.json())
             .then(data => setCars(data))
             .catch(err => console.log(err));
         console.log(email);
-    }, [email]); // Add email as a dependency to refetch if the user changes
+    }, [email]); 
 
 
     return (
@@ -148,7 +146,6 @@ const MyPostings = () => {
                                             </Button>
                                         </DialogActions>
                                     </Dialog>
-
                                 </div>
                             </CardContent>
                         </Card>

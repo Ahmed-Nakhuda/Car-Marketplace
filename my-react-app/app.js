@@ -273,7 +273,7 @@ app.get('/search', async (req, res) => {
 
 
 // Route to fetch cars posted by a user
-app.get('/cars', async (req, res) => {
+app.get('/userCars', async (req, res) => {
     const email = req.query.email;
     try {
         // fetch cars posted by the user
@@ -305,6 +305,7 @@ app.get('/editCarPage/:id', async (req, res) => {
 
 // Route to update a car
 app.put('/editCar/:id', async (req, res) => {
+    // 
     const id = req.params.id;
     const { firstName, lastName, email, phoneNumber, city, province, make, model, price, kilometers, year, VIN,
             stockNumber, drivetrain, engine, bodyType, seats, condition, fuelType, batteryRange, chargingTime, 
@@ -343,6 +344,7 @@ app.put('/editCar/:id', async (req, res) => {
             description
         };
 
+        // 
         await carCollection.findByIdAndUpdate(id, updateFields, { new: true });
         res.json('Car updated successfully');
     } catch (error) {

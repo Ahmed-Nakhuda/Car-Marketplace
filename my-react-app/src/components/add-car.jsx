@@ -445,17 +445,17 @@ const AddCar = () => {
                     <FormControl component="fieldset">
                         <FormLabel component="legend">Fuel Type</FormLabel>
                         <RadioGroup row onChange={(e) => setFuelType(e.target.value)} value={fuelType}>
-                            <FormControlLabel value="gasoline" control={<Radio />} label="Gasoline" />
-                            <FormControlLabel value="diesel" control={<Radio />} label="Diesel" />
-                            <FormControlLabel value="electric" control={<Radio />} label="Electric" />
-                            <FormControlLabel value="hybrid" control={<Radio />} label="Hybrid" />
+                            <FormControlLabel value="Gasoline" control={<Radio />} label="Gasoline" />
+                            <FormControlLabel value="Diesel" control={<Radio />} label="Diesel" />
+                            <FormControlLabel value="Electric" control={<Radio />} label="Electric" />
+                            <FormControlLabel value="Hybrid" control={<Radio />} label="Hybrid" />
                         </RadioGroup>
                     </FormControl>
                 </div>
 
 
                 <div className="group">
-                    {fuelType === "gasoline" && (
+                    {fuelType === "Gasoline" && (
                         <>
                             <TextField onChange={(e) => setCityFuelConsumption(e.target.value)} type="number" name="cityFuelConsumption" id="cityFuelConsumption" label="City Fuel Consumption L/100km" variant="standard" />
                             <TextField onChange={(e) => setHighwayFuelConsumption(e.target.value)} type="number" name="highwayFuelConsumption" id="highwayFuelConsumption" label="Highway Fuel Consumption L/100km" variant="standard" />
@@ -465,7 +465,7 @@ const AddCar = () => {
                 </div>
 
                 <div className="group">
-                    {fuelType === "diesel" && (
+                    {fuelType === "Diesel" && (
                         <>
                             <TextField onChange={(e) => setCityFuelConsumption(e.target.value)} type="number" name="cityFuelConsumption" id="cityFuelConsumption" label="City Fuel Consumption L/100km" variant="standard" />
                             <TextField onChange={(e) => setHighwayFuelConsumption(e.target.value)} type="number" name="highwayFuelConsumption" id="highwayFuelConsumption" label="Highway Fuel Consumption L/100km" variant="standard" />
@@ -475,7 +475,7 @@ const AddCar = () => {
                 </div>
 
                 <div className="group">
-                    {fuelType === "electric" && (
+                    {fuelType === "Electric" && (
                         <>
                             <TextField onChange={(e) => setBatteryRange(e.target.value)} type="number" name="batteryRange" id="batteryRange" label="Battery Range (km)" variant="standard" />
                             <TextField onChange={(e) => setChargingTime(e.target.value)} type="number" name="chargingTime" id="chargingTime" label="Charging Time (hours)" variant="standard" />
@@ -484,7 +484,7 @@ const AddCar = () => {
                 </div>
 
                 <div className="group">
-                    {fuelType === "hybrid" && (
+                    {fuelType === "Hybrid" && (
                         <>
                             <TextField onChange={(e) => setCityFuelConsumption(e.target.value)} type="number" name="cityFuelConsumption" id="cityFuelConsumption" label="City Fuel Consumption L/100km" variant="standard" />
                             <TextField onChange={(e) => setHighwayFuelConsumption(e.target.value)} type="number" name="highwayFuelConsumption" id="highwayFuelConsumption" label="Highway Fuel Consumption L/100km" variant="standard" />

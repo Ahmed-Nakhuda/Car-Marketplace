@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 
 const Saves = () => {
     const [cars, setCars] = useState([]); 
-    const email = localStorage.getItem('email'); // Retrieve the logged-in user's email from localStorage
+    const email = localStorage.getItem('email'); 
     const navigate = useNavigate(); 
 
     // Fetch saved cars when the component mounts
@@ -26,14 +26,18 @@ const Saves = () => {
             }
         }
         fetchSavedCars();
-    }, [email]); // Add email as a dependency to refetch if the user changes
+    }, [email]); 
 
+
+    // Function to unsave a cars
     async function handleUnsaveCar(carId) {
+        // send a request to the server to unsave the car
         try {
             await axios.post('http://localhost:5000/unsaveCar', {
-                email: email, // Make sure email is defined correctly
+                email: email,
                 carId: carId
             });
+            // remove the unsaved car from the cars state
             setCars(cars.filter((car) => car._id !== carId));
         } catch (error) {
             console.error('Error unsaving car:', error);
@@ -81,7 +85,7 @@ const Saves = () => {
                                         onClick={() => handleUnsaveCar(car._id)}
                                         size="small"
                                         variant="contained"
-                                        color="primary"
+                                        color="error"
                                     >
                                         Unsave
                                     </Button>

@@ -50,8 +50,8 @@ const Login = () => {
                         setErrorMessage('incorrect username or password')
                     }
                 })
-        } catch (e) {
-            console.log(e);
+        } catch (error) {
+            console.log(error);
         }
     }
 
